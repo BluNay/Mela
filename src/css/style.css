@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "cherryplfumpy";
+  src: local("cherryplfumpy"), url("../media/fonts/cherryplfumpy/Cherryplfumpy-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "tahoma";
+  src: local("tahoma"), url("../media/fonts/tahoma/tahoma.ttf") format("truetype") tech(color-COLRv1), url("../media/fonts/tahoma/tahomabd.ttf") format("truetype");
+}
+/* --- Global Styles --- */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "tahoma";
+  overflow-x: hidden;
+  background-color: #d93f4c;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d93f4c;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+header img {
+  margin-left: 40px;
+  width: 70px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+}
+header nav ul li {
+  margin: 0 15px;
+  font-family: "cherryplfumpy";
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #f8f3ef;
+  font-weight: bold;
+}
+header nav ul li a:hover {
+  color: #69c569;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #2b2b2b;
+  color: #f8f3ef;
+  font-size: 14px;
+}
+footer nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+footer nav p,
+footer nav a {
+  width: 50%;
+}
+footer a {
+  color: #f8f3ef;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #d93f4c;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 70px;
+  padding-left: 0px;
+}
+footer ul i {
+  font-size: 40px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+footer ul i:hover {
+  transform: translateY(-5px);
+}
+
+/* Animation parallax */
+@keyframes parallax {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 200%;
+  }
+}
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  header img {
+    margin-left: 20px;
+    width: 60px;
+  }
+}/*# sourceMappingURL=style.css.map */

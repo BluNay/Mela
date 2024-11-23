@@ -1,0 +1,143 @@
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 100px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    width: 40%;
+    color: #333;
+
+    h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            text-align: center;
+            font-size: 24px;
+            margin: 10px 0;
+
+            i {
+                color: #202020;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                background-color: #ddd;
+            }
+        }
+    }
+
+
+}
+
+.flex_contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+}
+
+.form-fields {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-names {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    input[type='text'] {
+        width: 48%;
+        padding: 12px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #333;
+        font-size: 16px;
+    }
+}
+
+
+
+.form-email,
+.form-sujet,
+.form-msg {
+    width: 100%;
+}
+
+.form-email input {
+    width: 582px;
+}
+
+.form-msg {
+    display: flex;
+    flex-direction: column;
+}
+
+#sujet {
+    background-color: #202020;
+    color: #fff;
+    height: 40px;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+.form-fields input,
+.form-fields textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    background-color: #202020;
+    color: #979797;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+    width: 580px;
+    height: 120px;
+}
+
+button[type="submit"] {
+    background-color: #202020;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #333;
+    }
+}
+
+.form-submit[type="submit"] {
+    color: #fff;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="src/media/img/icon_mela.ico" />
+
+		<link rel="stylesheet" href="src/css/style.css" />
+		<link rel="stylesheet" href="src/css/contact.css" />
+		<title>Contact - Mela</title>
+
+	</head>
+	<body>
+		<header>
+			<a href="index.html"
+				><img src="src/media/img/Logo_mela_white.svg" alt="Logo Mela" class="logo_mela_white" />
+			</a>
+
+			<nav>
+				<ul>
+					<li class="item"><a href="cartes.html">Cartes</a></li>
+					<li class="item"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="contact-form">
+				<div class="contact-info">
+					<h3>Pour nous contacter :</h3>
+					<ul>
+						<li><i class="fa-solid fa-phone"></i> 02 62 43 08 81</li>
+						<li><i class="fa-solid fa-envelope"></i> contact@mela.com</li>
+						<li><i class="fa-solid fa-location-dot"></i> 12 rue des Smoothies, 75001 Paris</li>
+					</ul>
+					<img src="src/media/img/Logo_mela_red.svg" alt="Logo mela" />
+				</div>
+				<form action="#" method="post" class="form-fields">
+					<div class="form-names">
+						<div>
+							<label for="nom">* Nom :</label>
+							<input type="text" id="nom" name="nom" placeholder="Nom" required />
+						</div>
+						<div>
+							<label for="nom">* Prénom :</label>
+							<input type="text" id="prenom" name="prenom" placeholder="Prénom" required />
+						</div>
+					</div>
+					<div class="form-email">
+						<label for="email">* Email :</label>
+						<input type="email" id="email" name="email" placeholder="Email" required />
+					</div>
+					<div class="form-tel">
+						<label for="telephone">Téléphone (optionnel) :</label>
+						<input type="tel" id="telephone" name="telephone" placeholder="ex : 06 92 11 22 33" />
+					</div>
+					<div class="form-sujet">
+						<label for="sujet">Raison de votre contact :</label>
+						<select id="sujet" name="sujet" required>
+							<option value="" disabled selected>Choisissez une option</option>
+							<option value="info_produits">Demande d'informations sur les produits</option>
+							<option value="avis">Suggestions ou avis</option>
+							<option value="partenariat">Demande de partenariat</option>
+							<option value="autres">Questions générales ou autres</option>
+						</select>
+					</div>
+					<div class="form-msg">
+						<label for="message">Ecrivez votre message :</label>
+						<textarea
+							id="message"
+							name="message"
+							placeholder="Ecrivez votre message ici"></textarea>
+					</div>
+
+					<button
+						type="submit"
+						class="form-submit"
+						target="_blank"
+						onclick="alert('OH, le RAT 🐀')">
+						Envoyer
+					</button>
+				</form>
+			</section>
+		</main>
+
+		<footer>
+			<nav>
+				<p>&copy; 2024 Mela. Tous droits réservés</p>
+				<a href="mentions-legales.html">Mentions Légales</a>
+			</nav>
+			<ul class="social-links">
+				<li>
+					<a href="#"><i class="fa-brands fa-facebook"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fa-brands fa-instagram"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+				</li>
+			</ul>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="https://kit.fontawesome.com/f0f395534e.js" crossorigin="anonymous"></script>
+	</body>
+</html>
