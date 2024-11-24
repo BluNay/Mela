@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="src/css/style.css" />
 		<link rel="stylesheet" href="src/css/contact.css" />
 		<title>Contact - Mela</title>
-
 	</head>
 	<body>
 		<header>
@@ -16,12 +15,30 @@
 				><img src="src/media/img/Logo_mela_white.svg" alt="Logo Mela" class="logo_mela_white" />
 			</a>
 
-			<nav>
+			<!-- Menu principal (desktop) -->
+			<nav class="desktop-menu">
 				<ul>
 					<li class="item"><a href="cartes.html">Cartes</a></li>
 					<li class="item"><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
+
+			<!-- Menu burger (mobile) -->
+			<div id="mySidenav" class="sidenav">
+				<a id="closeBtn" href="#" class="close">×</a>
+				<ul>
+					<li><a href="cartes.html">Cartes</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+
+			<a href="#" id="openBtn" class="burger-menu">
+				<span class="burger-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</a>
 		</header>
 
 		<main>
@@ -103,5 +120,6 @@
 
 		<!-- Scripts -->
 		<script src="https://kit.fontawesome.com/f0f395534e.js" crossorigin="anonymous"></script>
+		<script src="src/media/scripts/js/menu.js"></script>
 	</body>
 </html>

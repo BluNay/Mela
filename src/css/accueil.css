@@ -18,7 +18,7 @@
   filter: opacity(20%);
   animation: parallax 8s infinite linear;
 }
-.parallax_accueil div::before {
+.parallax_accueil .smoothie div::before {
   content: "";
   position: absolute;
   width: 260px;
@@ -31,7 +31,7 @@
   rotate: 45deg;
   transform: scaleX(-1);
 }
-.parallax_accueil div::after {
+.parallax_accueil .smoothie div::after {
   content: "";
   position: absolute;
   width: 260px;
@@ -42,14 +42,14 @@
   top: 300px;
   right: 100px;
 }
-.parallax_accueil h1 {
+.parallax_accueil .smoothie h1 {
   margin-top: 50px;
   text-align: center;
   color: #f8f3ef;
   font-family: "cherryplfumpy";
   font-size: 40px;
 }
-.parallax_accueil p {
+.parallax_accueil .smoothie p {
   text-align: center;
   color: #f8f3ef;
   font-family: "Montserrat", sans-serif;
@@ -57,7 +57,7 @@
   position: relative;
   z-index: 1;
 }
-.parallax_accueil .smoothie {
+.parallax_accueil .smoothie img {
   position: absolute;
   bottom: -320px;
   left: calc(50% - 500px);
@@ -147,30 +147,33 @@
   .parallax_accueil {
     height: 50vh;
   }
-  .parallax_accueil div::before,
-  .parallax_accueil div::after {
-    display: none;
-  }
-  .parallax_accueil h1 {
-    font-size: 30px;
-  }
-  .parallax_accueil .smoothie {
-    bottom: 70px;
-    left: calc(50% - 150px);
-    width: 300px;
-    height: 300px;
-    z-index: 2;
-  }
   .parallax_accueil::before {
     content: "";
     background-size: initial;
   }
-  .parallax_accueil p {
+  .parallax_accueil .smoothie {
+    position: relative;
+    z-index: 1;
+  }
+  .parallax_accueil .smoothie div::before,
+  .parallax_accueil .smoothie div::after {
     display: none;
+  }
+  .parallax_accueil .smoothie h1 {
+    font-size: 30px;
+  }
+  .parallax_accueil .smoothie p {
+    display: none;
+  }
+  .parallax_accueil .smoothie img {
+    bottom: -340px;
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 300px;
   }
   .accueil_section {
     position: relative;
-    z-index: 1;
+    z-index: 0;
   }
   .accueil_section div {
     flex-direction: column;
@@ -184,11 +187,24 @@
   .accueil_section div .cartes .smoothie_green {
     width: 280px;
     left: calc(15% - 140px);
+    transition: none;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  .parallax_accueil div::before,
-  .parallax_accueil div::after {
-    display: none;
+@media (max-width: 425px) {
+  .parallax_accueil .smoothie {
+    position: relative;
+    z-index: 1;
+  }
+  .parallax_accueil .smoothie img {
+    bottom: -340px;
+  }
+  .accueil_section {
+    position: relative;
+    z-index: 0;
+  }
+  .accueil_section div .cartes .smoothie_mango,
+  .accueil_section div .cartes .smoothie_berry,
+  .accueil_section div .cartes .smoothie_green {
+    transition: none;
   }
 }/*# sourceMappingURL=accueil.css.map */

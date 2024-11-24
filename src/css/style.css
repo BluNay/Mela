@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "cherryplfumpy";
@@ -22,32 +23,109 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  font-family: "cherryplfumpy";
   background-color: #d93f4c;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  padding: 10px;
+  /* Menu desktop */
+  /* Menu burger */
+  /* Icône burger */
 }
 header img {
   margin-left: 40px;
   width: 70px;
 }
-header nav ul {
-  list-style: none;
+header .desktop-menu ul {
+  list-style-type: none;
   display: flex;
-  justify-content: center;
-  padding: 10px 10px;
+  margin: 0;
+  padding: 0;
 }
-header nav ul li {
+header .desktop-menu li {
   margin: 0 15px;
-  font-family: "cherryplfumpy";
 }
-header nav ul li a {
+header .desktop-menu a {
   text-decoration: none;
-  color: #f8f3ef;
-  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  position: relative;
 }
-header nav ul li a:hover {
+header .desktop-menu a:hover {
   color: #69c569;
+}
+header .desktop-menu a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #69c569;
+  transition: transform 0.25s ease-out;
+  transform-origin: bottom center;
+}
+header .desktop-menu a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+header .desktop-menu {
+  display: flex;
+}
+header .sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  background-color: #e8e8e8;
+  padding-top: 80px;
+  transition: right 0.5s ease;
+  text-align: center;
+}
+header .sidenav a {
+  padding: 8px 8px 20px 20px;
+  font-size: 20px;
+  color: #d93f4c;
+  display: block;
+  transition: 0.3s;
+  font-weight: 700;
+}
+header .sidenav a:hover {
+  color: #111;
+}
+header .sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+header .sidenav.active {
+  right: 0;
+  z-index: 99;
+}
+header .sidenav .close {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  text-decoration: none;
+}
+header .burger-menu {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+header .burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: #f8f3ef;
+  margin: 6px 0;
+  transition: all 0.3s ease-in-out;
 }
 
 /* --- Footer --- */
@@ -104,8 +182,30 @@ footer ul i:hover {
 }
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
+  header {
+    padding: 0px;
+  }
   header img {
     margin-left: 20px;
     width: 60px;
+  }
+  header .desktop-menu {
+    display: none; /* Cacher le menu desktop */
+  }
+  header .burger-menu {
+    display: block; /* Afficher le menu burger */
+    padding: 10px 70px 10px 0px;
+  }
+}
+@media (max-width: 425px) {
+  header {
+    padding: 0px;
+  }
+  header .desktop-menu {
+    display: none; /* Cacher le menu desktop */
+  }
+  header .burger-menu {
+    display: block; /* Afficher le menu burger */
+    padding: 10px 30px 10px 0px;
   }
 }/*# sourceMappingURL=style.css.map */

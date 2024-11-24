@@ -14,24 +14,44 @@
 				><img src="src/media/img/Logo_mela_white.svg" alt="Logo Mela" class="logo_mela_white" />
 			</a>
 
-			<nav>
+			<!-- Menu principal (desktop) -->
+			<nav class="desktop-menu">
 				<ul>
 					<li class="item"><a href="cartes.html">Cartes</a></li>
 					<li class="item"><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
+
+			<!-- Menu burger (mobile) -->
+			<div id="mySidenav" class="sidenav">
+				<a id="closeBtn" href="#" class="close">×</a>
+				<ul>
+					<li><a href="cartes.html">Cartes</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+
+			<a href="#" id="openBtn" class="burger-menu">
+				<span class="burger-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</a>
 		</header>
 
 		<main>
 			<section class="parallax_accueil">
-				<div>
-					<h1>La Fraicheur Fruitee</h1>
-					<p>
-						Des smoothies frais et gourmands, pour une explosion de saveurs naturelles à chaque
-						gorgée.
-					</p>
-				</div>
-				<img src="src/media/img/smoothie.png" alt="smoothie" class="smoothie" />
+				<article class="smoothie">
+					<div>
+						<h1>La Fraicheur Fruitee</h1>
+						<p>
+							Des smoothies frais et gourmands, pour une explosion de saveurs naturelles à
+							chaque gorgée.
+						</p>
+					</div>
+					<img src="src/media/img/smoothie.png" alt="smoothie" />
+				</article>
 			</section>
 
 			<section class="accueil_section">
